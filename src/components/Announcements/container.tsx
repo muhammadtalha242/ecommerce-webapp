@@ -5,4 +5,5 @@ export const AnnouncementsContainer = styled.div`
   background-color: teal;
   color: white;
   text-align: center;
+  font-size: 14px;
 `;
