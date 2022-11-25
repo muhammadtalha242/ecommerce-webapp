@@ -1,6 +1,7 @@
 import React from "react";
 
 import Announcements from "../components/Announcements";
+import Slider from "../components/Slider";
 import Topbar from "../components/Topbar";
 
 const Home = () => {
@@ -8,6 +9,7 @@ const Home = () => {
     <>
       <Announcements />
       <Topbar />
+      <Slider />
       <div>Home</div>
     </>
   );
