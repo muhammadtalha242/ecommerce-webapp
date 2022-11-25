@@ -1,17 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
 import { SliderArrowContainer, SliderContainer } from "./container";
 import ArrowBackIosNewOutlinedIcon from "@mui/icons-material/ArrowBackIosNewOutlined";
 import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutlined";
 
+import Tile, { ITile } from "./slider";
+import { sliderItems } from "../../Utils/data";
 
 const Slider = () => {
+  const [, setCurrentIndex] = useState(0);
+  const [currentTile, setCurrentTile] = useState<ITile>(sliderItems[0]);
+
+  const handleClick = (direction: "left" | "right") => () => {
+    if (direction === "left") {
+      setCurrentIndex((prevIndex) => {
+        const indexUpdate =
+          (prevIndex - 1 + sliderItems.length) % sliderItems.length;
+        setCurrentTile(sliderItems[indexUpdate]);
+        return indexUpdate;
+      });
+    } else {
+      setCurrentIndex((prevIndex) => {
+        const indexUpdate = (prevIndex + 1) % sliderItems.length;
+        setCurrentTile(sliderItems[indexUpdate]);
+        return indexUpdate;
+      });
+    }
+  };
+
   return (
     <SliderContainer>
-      Slider
-      <SliderArrowContainer direction="left">
+      <SliderArrowContainer direction="left" onClick={handleClick("left")}>
         <ArrowBackIosNewOutlinedIcon />
       </SliderArrowContainer>
-      <SliderArrowContainer direction="right">
+      <Tile {...currentTile} />
+      <SliderArrowContainer direction="right" onClick={handleClick("right")}>
         <ArrowForwardIosOutlinedIcon />
       </SliderArrowContainer>
     </SliderContainer>
