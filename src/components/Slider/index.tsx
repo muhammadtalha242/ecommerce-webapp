@@ -3,7 +3,7 @@ import { SliderArrowContainer, SliderContainer } from "./container";
 import ArrowBackIosNewOutlinedIcon from "@mui/icons-material/ArrowBackIosNewOutlined";
 import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutlined";
 
-import Tile, { ITile } from "./slider";
+import Tile, { ITile } from "./tile";
 import { sliderItems } from "../../Utils/data";
 
 const Slider = () => {
