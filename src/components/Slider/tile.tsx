@@ -20,7 +20,7 @@ export interface ITile {
 
 const Tile = (props: ITile) => {
   return (
-    <TileContainer>
+    <>
       <TileContentContainer>
         <TileImageContainer>
           <TileStyledImage src={props.img} />
@@ -31,7 +31,7 @@ const Tile = (props: ITile) => {
           <TileButtonContainer>BUY NOW</TileButtonContainer>
         </TileInfoContainer>
       </TileContentContainer>
-    </TileContainer>
+    </>
   );
 };
 

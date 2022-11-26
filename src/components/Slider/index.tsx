@@ -1,5 +1,9 @@
 import React, { useState } from "react";
-import { SliderArrowContainer, SliderContainer } from "./container";
+import {
+  SliderArrowContainer,
+  SliderContainer,
+  TileContainer,
+} from "./container";
 import ArrowBackIosNewOutlinedIcon from "@mui/icons-material/ArrowBackIosNewOutlined";
 import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutlined";
 
@@ -28,11 +32,13 @@ const Slider = () => {
   };
 
   return (
-    <SliderContainer>
+    <SliderContainer backgroundColor={currentTile.bg}>
       <SliderArrowContainer direction="left" onClick={handleClick("left")}>
         <ArrowBackIosNewOutlinedIcon />
       </SliderArrowContainer>
-      <Tile {...currentTile} />
+      <TileContainer>
+        <Tile {...currentTile} />
+      </TileContainer>
       <SliderArrowContainer direction="right" onClick={handleClick("right")}>
         <ArrowForwardIosOutlinedIcon />
       </SliderArrowContainer>
