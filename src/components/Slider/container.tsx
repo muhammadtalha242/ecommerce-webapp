@@ -1,10 +1,11 @@
 import styled from "styled-components";
 import { GREEN_TERTIARY, WHITE } from "../../Styles/colors";
 
-export const SliderContainer = styled.div`
+export const SliderContainer = styled.div<{ backgroundColor: string }>`
   width: 100%;
   height: 100vh;
   display: flex;
+  background-color: #${(props) => props.backgroundColor};
   position: relative;
 `;
 
@@ -28,6 +29,7 @@ export const SliderArrowContainer = styled.div<{ direction: "left" | "right" }>`
 
 export const TileContainer = styled.div`
   height: 100%;
+  transition: all 1.5s ease;
 `;
 
 export const TileContentContainer = styled.div`
