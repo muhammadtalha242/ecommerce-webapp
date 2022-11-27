@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { GREEN_TERTIARY, WHITE } from "../../Styles/colors";
+import { WHITE } from "../../Styles/colors";
 
 export const SliderContainer = styled.div<{ backgroundColor: string }>`
   width: 100%;

@@ -1,7 +1,6 @@
 import React from "react";
 import {
   TileButtonContainer,
-  TileContainer,
   TileContentContainer,
   TileDescContainer,
   TileImageContainer,
