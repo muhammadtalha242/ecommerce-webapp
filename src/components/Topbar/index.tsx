@@ -24,7 +24,7 @@ const Topbar = () => {
         <TopbarLeftContainer>
           <TopbarLeftLanguageContainer>EN</TopbarLeftLanguageContainer>
           <TopbarLeftSearchContainer>
-            <SearchInputContainer></SearchInputContainer>
+            <SearchInputContainer/>
             <AiOutlineSearch style={{ color: "gray", fontSize: 16 }} />
           </TopbarLeftSearchContainer>
         </TopbarLeftContainer>

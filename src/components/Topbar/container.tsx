@@ -44,6 +44,10 @@ export const TopbarLeftSearchContainer = styled.div`
 
 export const SearchInputContainer = styled.input`
   border: none;
+
+  &:active {
+    border: 2px solid red;
+  }
 `;
 export const TopbarCenterLogoContainer = styled.div`
   font-weight: bold;
