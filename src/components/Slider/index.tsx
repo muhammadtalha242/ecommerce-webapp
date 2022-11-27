@@ -1,12 +1,12 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import ArrowBackIosNewOutlinedIcon from "@mui/icons-material/ArrowBackIosNewOutlined";
+import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutlined";
+
 import {
   SliderArrowContainer,
   SliderContainer,
   TileContainer,
 } from "./container";
-import ArrowBackIosNewOutlinedIcon from "@mui/icons-material/ArrowBackIosNewOutlined";
-import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutlined";
-
 import Tile, { ITile } from "./tile";
 import { sliderItems } from "../../Utils/data";
 
