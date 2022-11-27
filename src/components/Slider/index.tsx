@@ -37,7 +37,7 @@ const Slider = () => {
         <ArrowBackIosNewOutlinedIcon />
       </SliderArrowContainer>
       <TileContainer>
-        <Tile {...currentTile} />
+        <Tile {...currentTile} key={currentTile.id} />
       </TileContainer>
       <SliderArrowContainer direction="right" onClick={handleClick("right")}>
         <ArrowForwardIosOutlinedIcon />
